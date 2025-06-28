@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devocionais Cristãos | Renove sua Fé Diariamente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #2C2C2C;
+            background-color: #FAFAFA;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(24, 52, 70, 0.7), rgba(24, 52, 70, 0.7)), url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .devotional-card {
+            transition: all 0.3s ease;
+        }
+        .devotional-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .scroll-container {
+            scrollbar-width: thin;
+            scrollbar-color: #CBA135 transparent;
+        }
+        .scroll-container::-webkit-scrollbar {
+            height: 6px;
+        }
+        .scroll-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background-color: #CBA135;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-[#183446]">
+                    <span class="text-[#CBA135]">Devocionais</span> Cristãos
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-[#2C2C2C] hover:text-[#CBA135] transition">Início</a>
+                <a href="#devotionals" class="text-[#2C2C2C] hover:text-[#CBA135] transition">Devocionais</a>
+                <a href="#about" class="text-[#2C2C2C] hover:text-[#CBA135] transition">Sobre</a>
+                <a href="#contact" class="text-[#2C2C2C] hover:text-[#CBA135] transition">Contato</a>
+            </nav>
+            <button class="md:hidden text-[#2C2C2C]">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section pt-32 pb-20 text-white flex items-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Devocionais para renovar sua fé diariamente</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Encontre devocionais organizados por duração, para acompanhar seu ritmo espiritual</p>
+            <a href="#devotionals" class="bg-[#CBA135] hover:bg-[#b38f2e] text-white font-medium py-3 px-8 rounded transition duration-300 inline-block">
+                Ver Devocionais
+            </a>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="devotionals" class="py-16 bg-[#F5EFE6]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-[#183446]">Nossos Devocionais</h2>
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="Buscar devocionais..." class="w-full py-3 px-6 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CBA135] focus:border-transparent">
+                    <i class="fas fa-search absolute right-6 top-4 text-gray-400"></i>
+                </div>
+            </div>
+
+            <!-- 7 Days Devotionals -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-[#183446]">Devocionais de 7 Dias</h3>
+                <div class="scroll-container overflow-x-auto pb-6">
+                    <div class="flex space-x-6 w-max">
+                        <!-- Card 1 -->
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Manhãs com Cristo</h4>
+                            <p class="text-gray-600 mb-4">Comece seu dia com a presença de Deus e renovação espiritual.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 9,90</p>
+                            <a href="https://kiwify.com.br/exemplo1" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+
+                        <!-- Card 2
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Fé em Ação</h4>
+                            <p class="text-gray-600 mb-4">Aplicando os princípios bíblicos no seu cotidiano.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 9,90</p>
+                            <a href="https://kiwify.com.br/exemplo2" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+
+                        Card 3
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Oração e Silêncio</h4>
+                            <p class="text-gray-600 mb-4">Aprenda a ouvir a voz de Deus em meio ao silêncio.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 9,90</p>
+                            <a href="https://kiwify.com.br/exemplo3" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+
+                       Card 4
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Gratidão Diária</h4>
+                            <p class="text-gray-600 mb-4">Transforme sua vida cultivando um coração grato.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 9,90</p>
+                            <a href="https://kiwify.com.br/exemplo4" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15 Days Devotionals -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-[#183446]">Devocionais de 15 Dias</h3>
+                <div class="scroll-container overflow-x-auto pb-6">
+                    <div class="flex space-x-6 w-max">
+                        <!-- Card 1 -->
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Caminhando com Jesus</h4>
+                            <p class="text-gray-600 mb-4">Uma jornada de duas semanas para aprofundar seu relacionamento com Cristo.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 14,90</p>
+                            <a href="https://kiwify.com.br/exemplo5" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+
+                        <!-- Card 2 
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Sabedoria dos Provérbios</h4>
+                            <p class="text-gray-600 mb-4">Meditações diárias no livro de Provérbios para orientação prática.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 14,90</p>
+                            <a href="https://kiwify.com.br/exemplo6" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+
+                        Card 3
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Fruto do Espírito</h4>
+                            <p class="text-gray-600 mb-4">Cultivando amor, alegria, paz e todas as virtudes cristãs.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 14,90</p>
+                            <a href="https://kiwify.com.br/exemplo7" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+
+                        Card 4
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Deserto Espiritual</h4>
+                            <p class="text-gray-600 mb-4">Encontrando Deus mesmo nos momentos mais difíceis.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 14,90</p>
+                            <a href="https://kiwify.com.br/exemplo8" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 30 Days Devotionals -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-[#183446]">Devocionais de 30 Dias</h3>
+                <div class="scroll-container overflow-x-auto pb-6">
+                    <div class="flex space-x-6 w-max">
+                        <!-- Card 1 -->
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Vida no Espírito</h4>
+                            <p class="text-gray-600 mb-4">Devocionais para transformar sua rotina em uma jornada de fé, propósito e intimidade com Deus.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 19,90</p>
+                            <a href="https://pay.kiwify.com.br/JeoJlK5" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+
+                        <!-- Card 2 
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Salmos para a Alma</h4>
+                            <p class="text-gray-600 mb-4">Meditações nos Salmos para cura, conforto e renovação.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 19,90</p>
+                            <a href="https://kiwify.com.br/exemplo10" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+
+                        Card 3
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Mulheres da Bíblia</h4>
+                            <p class="text-gray-600 mb-4">Lições de fé e coragem das mulheres que marcaram a história bíblica.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 19,90</p>
+                            <a href="https://kiwify.com.br/exemplo11" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div>
+
+                         Card 4
+                        <div class="devotional-card bg-white rounded-lg shadow-md p-6 w-64 flex-shrink-0">
+                            <h4 class="text-xl font-bold mb-2 text-[#183446]">Homens de Fé</h4>
+                            <p class="text-gray-600 mb-4">Exemplos de masculinidade piedosa para inspirar sua jornada.</p>
+                            <p class="text-[#CBA135] font-bold mb-4">R$ 19,90</p>
+                            <a href="https://kiwify.com.br/exemplo12" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#CBA135] hover:bg-[#b38f2e] text-white text-center py-2 px-4 rounded transition duration-300">
+                                Comprar
+                            </a>
+                        </div> 
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-[#183446]">Sobre Nossos Devocionais</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Cada devocional foi criado com cuidado e propósito, para que sua jornada espiritual seja leve, profunda e constante. Nossos autores são teólogos e pastores experientes que combinam conhecimento bíblico com aplicação prática para o dia a dia.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Descubra o devocional ideal para o seu momento - seja uma semana de renovação, quinze dias de aprofundamento ou um mês inteiro de transformação espiritual.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#F5EFE6]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-[#183446]">Fale Conosco</h2>
+                <p class="text-lg text-gray-700 mb-12">Acompanhe nossas novidades ou entre em contato para dúvidas e sugestões.</p>
+                <div class="flex justify-center space-x-8">
+                    <a href="https://wa.me/5511999999999" target="_blank" class="text-[#183446] hover:text-[#CBA135] transition duration-300">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                    </a>
+                    <a href="https://instagram.com/devocionais" target="_blank" class="text-[#183446] hover:text-[#CBA135] transition duration-300">
+                        <i class="fab fa-instagram text-3xl"></i>
+                    </a>
+                    <a href="e-mail:miguelluizmanzoni1@gmail.com" class="text-[#183446] hover:text-[#CBA135] transition duration-300">
+                        <i class="fas fa-envelope text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-[#183446] text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6">
+                <a href="#" class="text-2xl font-bold">
+                    <span class="text-[#CBA135]">Devocionais</span> Cristãos
+                </a>
+            </div>
+            <p class="text-sm text-gray-300">Site institucional. Compras via Kiwify.</p>
+            <p class="text-xs text-gray-400 mt-4">© 2023 Devocionais Cristãos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.devotional-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h4').textContent.toLowerCase();
+                const description = card.querySelector('p:first-of-type').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
